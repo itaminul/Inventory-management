@@ -7,3 +7,5 @@ engine = create_engine(
     poll_size=10,
     max_overflow=20,
     )
+
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
