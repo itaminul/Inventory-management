@@ -30,3 +30,14 @@ def get_customer(
     return db.query(Customer).filter(
         Customer.id == customer_id
     ).first()
+def update_customer(
+    db: Session,
+        customer:Customer,
+        customer_data: dict,
+) -> Customer | None:
+    for key, value in customer_data.items():
+        setattr(customer, key, value)
+        db.commit()
+        db.refresh(customer)
+        return customer
+    return None

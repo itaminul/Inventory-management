@@ -6,6 +6,12 @@ class CustomerCreate(BaseModel):
     phone: str | None = None
     address: str | None = None
     is_active: bool | None = None
+class CustomerUpdate(BaseModel):
+    name: str
+    email: EmailStr | None = None
+    phone: str | None = None
+    address: str | None = None
+    is_active: bool = True
 
 class CustomerResponse(BaseModel):
     id: int
