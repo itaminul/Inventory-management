@@ -11,6 +11,8 @@ from app.modules.auth.models import User
 from app.modules.customer.models import  Customer
 from app.modules.customer_type.models import CustomerType
 from app.modules.product.models import Product
+from app.modules.requisition.models import Requisition, RequisitionItem
+
 
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
